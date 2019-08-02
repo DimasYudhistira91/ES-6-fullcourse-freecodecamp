@@ -10,6 +10,10 @@ function editArr() {
 editArr();
 console.log(s)
 
+
+
+
+
 // Prevent Object Mutasi
 function freezeObj() {
   const MATH_CONSTANTS = {
@@ -28,6 +32,11 @@ function freezeObj() {
 const PI = freezeObj();
 console.log(PI);
 
+
+
+
+
+
 // Arrow Function
 
 // 1. Arrow Function pada Anonymous Function:
@@ -37,3 +46,29 @@ var magic = function() {  //__________
 
 const arrow = () => new Date(); // ini adalah contoh penggunaan arrow function pada anonymous func untuk mempersingkat penulisan syntax
 
+// 2. Arrow Function pada Function dengan parameter
+var myConcat = function(arr1, arr2) {
+  return arr1.concat(arr2);
+};
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+    // berikut ini contoh arrow functionnya
+    const myConcats = (ar1, ar2) => ar1.concat(ar2);
+    console.log(myConcats([2, 3], [4, 5, 6]));
+
+
+
+
+
+
+
+// Arrow Function Tingkat Tinggi
+const himpunAngka = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+const listAngka = (a) => {
+  const angka = a.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+  return angka;
+};
+
+const angka = listAngka(himpunAngka);
+console.log(angka);
