@@ -62,7 +62,7 @@ console.log(myConcat([1, 2], [3, 4, 5]));
 
 
 
-// Arrow Function Tingkat Tinggi
+// Arrow Function Tingkat Tinggi (Filter & Map)
 const himpunAngka = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
 
 const listAngka = (a) => {
@@ -72,3 +72,24 @@ const listAngka = (a) => {
 
 const angka = listAngka(himpunAngka);
 console.log(angka);
+
+
+
+const nomer = [34, 1.2, -4, -26, 9, -0.91, 10];
+const list = (b) => {
+  const nmr = b.filter(ang => Number.isInteger(ang) && ang > 0).map(z => z * z);
+  return nmr;
+};
+
+const nmr = list(nomer);
+console.log(nmr);
+
+
+
+const increment = (function() {
+  return function increment(number, value = 1) {
+    return number + value;
+  };
+})();
+console.log(increment(5, 2));
+console.log(increment(5));
